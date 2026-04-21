@@ -14,7 +14,7 @@ public class HelloController {
         return "Hello World!";
     }
 
-    @GetMapping("/produtos")
+    @GetMapping("/produto")
     public Produto getProduto() {
         Produto p = new Produto();
         p.setId(1);
@@ -23,7 +23,7 @@ public class HelloController {
         return p;
     }
 
-    @PostMapping("/produtos")
+    @PostMapping("/produto")
     public String addNewProduto(@RequestBody Produto p) {
         System.out.println("Produto recebido");
         System.out.println(p.getId()+"/"+p.getNome()+"/"+p.getPreco());
